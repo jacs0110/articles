@@ -1,4 +1,4 @@
-# Core 自學回顧
+#  學期三自學回顧
 
 在過去兩個月當中，我想遭遇的最大挑戰，就是將 Node.js 專案從 MySQL 轉到 PostgreSQL 然後部署到 Heroku 上了吧
 
