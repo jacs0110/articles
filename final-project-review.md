@@ -10,9 +10,10 @@
 
 總之，我就還在摸索程式與不熟隊友的情況下，就變成了這次畢業專案的小組長。我們這一組中的三位成員，三位成員都有工作在身（聽說其他組好像都是全職學習的學生）。另外我們這組其中一位成員本身就是工程師。
 
+***
 ### 如何決定主題
 
-當初 AC 提供了三個畢業專案的主題，分別是 CRM 平台、電商平台、行程規劃工具，我們還蠻一致的投了電商平台一票，我想應該是大家對於電商比較有感覺，我想應該是大家對於電商比較有感覺
+當初 AC 提供了三個畢業專案的主題，分別是 CRM 平台、電商平台、行程規劃工具，我們還蠻一致的投了電商平台一票，我想應該是大家對於電商比較有感覺。
 
 但是要做怎麼樣的電商網站、要針對什麼客群、要解決什麼問題，其實我們並沒有什麼太多的想法（真的是剛毅木訥的一群人），因此我們決定，先把 AC 開出來的使用者故事給很快做完，之後也許可以特別針對管理者後台進行優化，像是報表、庫存管理等功能。
 
@@ -24,6 +25,7 @@
 
 > 建議：既然有教產品思維，就要拿出來用跟練習啊，不要浪費機會了！
 
+***
 ### 如何分工
 
 所以我們第一次討論的決定如下
@@ -42,14 +44,15 @@
 
 我主要負責一般使用者功能與 api，一位組員負責前端，另一位負責 app 基礎建設與管理者功能
 
-兩位組員在開發時程中有安排出遊形成，因此我們暫定
+兩位組員在開發時程中有安排出遊行程，因此我們暫定
 * 開發的前三週完成 AC 的使用者故事
 * 第四週到第六週強化管理者後台的功能，與測試
 
 > 建議：事情總是不會像想像中的這麼順利，所以除了一開始透過鎖定問題來縮小產品 scope 之外，同時在開發的過程中也需要動態調整開發計畫
 
+***
 ### 如何合作與管理
-#### 1. 文件管理
+### 1. 文件管理
 
 最一開始，我們把所有資訊（包含使用者故事、路由設計、第三方工具等）放在 Google sheet 上，不過後來就慢慢地移動回到 Github 的 Project 上
 
@@ -57,7 +60,7 @@
 
 Github Project 是一個非常類似 Trello 的看板管理系統，而由於是 Github 本身的功能，因此可以與 Github issue 連動。
 
-以我們的 case 來說，我們開了四個 boards，分別為
+以我們的 case 來說，我們開了四個 columns，分別為
 1. Documents - 存放所有跟開發的相關文件
 2. To Do
 3. In Progress
@@ -67,7 +70,7 @@ Github Project 是一個非常類似 Trello 的看板管理系統，而由於是
 
 ![Imgur](https://i.imgur.com/LsKOZNF.png)
 
-寫完 issue 的標題與內容之後，可以在右方選擇 Projects，然後會出現選單，這時候我們就可以選擇將這個 issue 放到哪裡個欄位當中
+寫完 issue 的標題與內容之後，可以在右方選擇 Projects，然後會出現選單，這時候我們就可以選擇將這個 issue 放到哪個欄位當中
 
 ![Imgur](https://i.imgur.com/Z2meNQU.png)
 
@@ -82,7 +85,7 @@ Github Project 是一個非常類似 Trello 的看板管理系統，而由於是
 
 當然如果有新開發的功能需要使用新參數，也請記得到 Heroku 這邊來同步新增
 
-#### 2. 流程管理
+### 2. 流程管理
 
 開發流程簡單介紹如下
 1. 在 Issues 上面開票（新的使用者故事，或者是 bug 等等），並設定好
@@ -103,9 +106,74 @@ Github Project 是一個非常類似 Trello 的看板管理系統，而由於是
 
 我想可能也是因為這樣，因此很少有需要上線討論的機會，有問題就會直接在 Github 上 tag 組員，或者在 basecamp 留言討論，問題通常很快就會被解決掉。
 
+### 3. 開發相關工具
+
+這裡也介紹一下開發過程中使用到的工具
+
+#### [Fork](https://git-fork.com/)
+
+Fork 是一個圖像化的版本管理工具，可以很快地看到分支與 commit 的狀態。我在上面沒有進行什麼操作，單純只是來確認狀況而已
+
+![Imgur](https://i.imgur.com/mTtUAws.png)
+
+#### [MySQLWorkbench](https://www.mysql.com/products/workbench/)
+
+MySQLWorkbench 是一個圖像化的 MySQL database 操作工具，我覺得很好用，特別是在測試資料操作的時候，可以很快將資料設定成我想要的狀態，然後進一步做測試
+
+![Imgur](https://i.imgur.com/VtXMdS0.png)
+
+以上兩個工具 AC 都有教，很不錯
+
+#### [pgAdmin](https://www.pgadmin.org/)
+
+在 local 端我們可以透過 MySQLWorkbench 來操作資料庫，在 Heroku 上使用 PostgreSQL 時，也可以做到一樣的事情
+
+請參與強者我組員的文章[【 Database 】透過 pgAdmin 操作 Heroku PostgreSQL 資料庫](https://learningsky.io/database-pgadmin-postgresql-heroku/)
+
+操作方式其實和 MySQLWorkbench 非常類似，強力推薦使用！
+
+![Imgur](https://i.imgur.com/qyD1EmR.png)
+
+#### [Swagger](https://swagger.io/)
+
+Swagger 是一個非常好用的 API 文檔工具與測試工具，只要寫好文檔（像是下面這樣）
+
+![Imgur](https://i.imgur.com/3ZFXIlW.png)
+
+啟動專案後，就會生成下面這樣的畫面
+
+![Imgur](https://i.imgur.com/q0lq5s2.png)
+
+直接透過圖形化介面操作並測試 API，比起用 Postman 更快更方便！這個也是強力推薦使用
+
+網路上有蠻多相關的資訊，也可以直接用 npm 安裝
+
+#### [Node-Red](https://nodered.org/)
+
+Node-Red 是一套基於 flow programming 的開發工具，可以透過拖曳的方式建構程式流程，每一個結點就像是一個小 function，可以輸入/輸出資訊，也可以接受/發出 API。
+
+這個工具其實我沒有很熟悉，主要是強者我隊友拿 Node-Red 來實現 Crontab 的功能，比寫程式碼方便多了！可以想像未來也可以很快速拿來的做各種測試。
+
+![](https://oranwind.s3.amazonaws.com/2019/Oct/_____2019_10_14___10_40_52-1571064951132.png)
+
+以上主要介紹「協助開發」的工具，至於其他用來建構 web app features 的第三方工具或套件，就不在這裡多做介紹。
 
 ***
 
-(...WIP)
+### 開發上遇到的問題與挑戰
+
+(WIP)
+
+### 如果有更多時間，在這個專案上會想要接下去做什麼？
+
+(WIP)
+
+### 如果可以重來一次，可以怎麼樣做得更好
+
+(WIP)
+
+### 心得
+
+(WIP)
 
 ![Imgur](https://i.imgur.com/Ck8XCzT.png)
